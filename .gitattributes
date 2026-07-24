@@ -1,0 +1,8 @@
+# 默认所有文本文件按 Git 规范自动处理（Windows 检出 CRLF，提交 LF）
+* text=auto
+
+# 但 Jupyter Notebook 本质是 JSON，禁止任何换行符转换（视为二进制）
+*.ipynb -text
+
+# 如果还有 .idea 未被忽略，也强制不转换（但已忽略，这行可有可无）
+.idea/** -text
